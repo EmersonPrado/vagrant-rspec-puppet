@@ -16,4 +16,9 @@ Vagrant.configure("2") do |config|
     shell.name = 'Install Ruby and Bundler'
     shell.path = 'bin/post.sh'
   end
+  config.vm.provision :shell do |shell|
+    shell.name       = 'Install Rspec and dependencies'
+    shell.privileged = false
+    shell.inline     = 'cd /vagrant/rspec_test ; rm -f Gemfile.lock 2> /dev/null || true ; bundle install ; rm -f Gemfile.lock'
+  end
 end
