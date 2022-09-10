@@ -6,6 +6,10 @@ Vagrant.configure("2") do |config|
   VMS.each do |name, box|
     config.vm.define name do |vm|
       vm.vm.box = box
+      vm.vm.provider 'virtualbox' do |virtualbox|
+        virtualbox.memory = 384
+        virtualbox.cpus = 1
+      end
     end
   end
 end
