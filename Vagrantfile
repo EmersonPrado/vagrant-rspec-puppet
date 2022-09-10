@@ -12,4 +12,8 @@ Vagrant.configure("2") do |config|
       end
     end
   end
+  config.vm.provision :shell do |shell|
+    shell.name = 'Install Ruby and Bundler'
+    shell.path = 'bin/post.sh'
+  end
 end
