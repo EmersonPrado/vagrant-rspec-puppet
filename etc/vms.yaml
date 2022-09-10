@@ -1,0 +1,3 @@
+---
+debian: 'debian/bullseye64'
+redhat: 'bento/rockylinux-8'
