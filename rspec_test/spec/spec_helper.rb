@@ -6,4 +6,7 @@ RSpec.configure do |c|
   c.module_path = File.join(fixture_path, 'modules')
   c.manifest_dir = File.join(fixture_path, 'manifests')
   c.parser = 'future'
+  c.after(:suite) do
+    RSpec::Puppet::Coverage.report!
+  end
 end
