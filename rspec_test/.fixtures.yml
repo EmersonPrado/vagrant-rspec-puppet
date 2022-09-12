@@ -2,3 +2,7 @@
 fixtures:
   symlinks:
     rspec_test: "#{source_dir}"
+  forge_modules:
+    stdlib:
+      repo: "puppetlabs/stdlib"
+      ref: "5.1.0"

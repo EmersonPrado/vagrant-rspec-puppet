@@ -10,8 +10,10 @@ describe 'rspec_test' do
     } end
 
     it { is_expected.to compile }
+    it { is_expected.to compile.with_all_deps }
     it { is_expected.to create_class('rspec_test')}
     it { is_expected.not_to contain_rspec_test__type('any_title') }
+    it { is_expected.to contain_class('stdlib') }
 
   end
 
@@ -23,8 +25,10 @@ describe 'rspec_test' do
     } end
 
     it { is_expected.to compile }
+    it { is_expected.to compile.with_all_deps }
     it { is_expected.to create_class('rspec_test')}
     it { is_expected.to contain_rspec_test__type('any_title') }
+    it { is_expected.to contain_class('stdlib') }
 
   end
 
