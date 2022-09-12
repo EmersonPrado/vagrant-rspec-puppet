@@ -5,5 +5,8 @@ for vm in $(
   awk '$2 == "running" { print $1 }'
 ) ; do
   echo "$vm"
-  vagrant ssh -c 'cd /vagrant/rspec_test ; rspec spec/' "$vm"
+  vagrant ssh -c '
+    cd /vagrant/rspec_test
+    bundle exec rake validate lint spec
+  ' "$vm"
 done
