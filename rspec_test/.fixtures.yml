@@ -1,0 +1,4 @@
+---
+fixtures:
+  symlinks:
+    rspec_test: "#{source_dir}"
