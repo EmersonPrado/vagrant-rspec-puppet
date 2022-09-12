@@ -1,3 +1,4 @@
 ---
 debian: 'debian/bullseye64'
 redhat: 'bento/rockylinux-8'
+opensuse: 'opensuse/Leap-15.2.x86_64'
