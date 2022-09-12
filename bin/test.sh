@@ -8,5 +8,6 @@ for vm in $(
   vagrant ssh -c '
     cd /vagrant/rspec_test
     bundle exec rake validate lint spec
+    rm -f Gemfile.lock
   ' "$vm"
 done
