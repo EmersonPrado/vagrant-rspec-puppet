@@ -28,4 +28,26 @@ describe 'rspec_test' do
 
   end
 
+  context 'with ensure => invalid' do
+
+    let(:params) do {
+      'ensure'     => 'invalid',
+      'type_title' => 'any_title',
+    } end
+
+    it { is_expected.to compile.and_raise_error(//) }
+
+  end
+
+  context 'with type_title => number' do
+
+    let(:params) do {
+      'ensure'     => 'present',
+      'type_title' => 0,
+    } end
+
+    it { is_expected.to compile.and_raise_error(//) }
+
+  end
+
 end
