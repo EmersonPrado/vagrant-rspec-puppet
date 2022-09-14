@@ -7,6 +7,7 @@
     1. [Prereqs](#prereqs)
     1. [Project download](#project-download)
     1. [VMs management](#vms-management)
+    1. [VMs configuration](#vms-configuration)
 
 ## Description
 
@@ -64,3 +65,12 @@ vagrant ssh \{ <VM> | /<Pattern>/ \}              # Enters SSH session
 # Exit with 'exit' command
 vagrant ssh -c <Command> \{ <VM> | /<Pattern>/ \} # Executes single command
 ```
+
+### VMs configuration
+
+`vagrant up` command will bring in VMs and install all necessary pieces of software:
+- Ruby
+- Ruby Bundler
+- Rspec and its dependencies
+
+Checkout `Vagrantfile` and `bin/post.sh` to see how it's done
