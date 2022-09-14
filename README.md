@@ -160,7 +160,7 @@ bin/test.sh     # Shows output below for each VM
     - [Unit testing with rspec-puppet - for beginners (Blog Puppet)](https://puppet.com/blog/unit-testing-rspec-puppet-for-beginners/)
 - [rspec-puppet official page](https://rspec-puppet.com/)
     - [All docs](https://rspec-puppet.com/documentation/)
-- Elsewhere
+- Community
     - Setting up Puppet module testing from scratch - Alex Harvey (**great and highly recommended series**)
         - [Part I, Puppet-syntax, Puppet-lint and Rspec-puppet](https://alexharv074.github.io/puppet/2016/05/08/setting-up-puppet-module-testing-from-scratch-part-i-puppet-syntax-puppet-lint-and-rspec-puppet.html)
         - [Part II, Beaker for module testing](https://alexharv074.github.io/puppet/2016/05/13/setting-up-puppet-module-testing-from-scratch-part-ii-beaker-for-module-testing.html)
