@@ -101,5 +101,12 @@ For those using [Atom](https://atom.io/) editor, I intentionally made (via `.ato
     - [Directories and files](https://puppet.com/docs/puppet/7/dirs_important_directories.html)
     - [Naming conventions](https://puppet.com/docs/puppet/7/modules_fundamentals.html)
     - [Language](https://puppet.com/docs/puppet/7/puppet_language.html)
+- Puppet Blog
+    - [Unit testing with rspec-puppet - for beginners (Blog Puppet)](https://puppet.com/blog/unit-testing-rspec-puppet-for-beginners/)
 - [rspec-puppet official page](https://rspec-puppet.com/)
     - [All docs](https://rspec-puppet.com/documentation/)
+- Elsewhere
+    - Setting up Puppet module testing from scratch - Alex Harvey (**great and highly recommended series**)
+        - [Part I, Puppet-syntax, Puppet-lint and Rspec-puppet](https://alexharv074.github.io/puppet/2016/05/08/setting-up-puppet-module-testing-from-scratch-part-i-puppet-syntax-puppet-lint-and-rspec-puppet.html)
+        - [Part II, Beaker for module testing](https://alexharv074.github.io/puppet/2016/05/13/setting-up-puppet-module-testing-from-scratch-part-ii-beaker-for-module-testing.html)
+        - [Part III, Travis CI](https://alexharv074.github.io/puppet/2016/05/16/setting-up-puppet-module-testing-from-scratch-part-iii-travis-ci.html)
