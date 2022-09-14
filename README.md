@@ -21,10 +21,10 @@ This project provides a Vagrant environment containing 3 VMs with vanilla instal
 
 ### Prereqs
 
-- Linux host
-- Git
-- Ruby
-- Vagrant
+- [Linux](https://en.wikipedia.org/wiki/Linux) host
+- [Git](https://git-scm.com/)
+- [Ruby](https://www.ruby-lang.org/)
+- [Vagrant](https://www.vagrantup.com/)
 
 ### Project download
 
