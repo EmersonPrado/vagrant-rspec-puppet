@@ -10,6 +10,7 @@
     1. [VMs configuration](#vms-configuration)
 1. [Module and test specs](#module-and-test-specs)
     1. [Location and naming](#location-and-naming)
+    1. [Atom](#atom)
 
 ## Description
 
@@ -84,3 +85,7 @@ Checkout `Vagrantfile` and `bin/post.sh` to see how it's done
 All Puppet code and tests should go inside `<Project root dir>/rspec_test`.
 
 Be sure to follow official guidelines for Puppet's [directories and files](https://puppet.com/docs/puppet/7/dirs_important_directories.html) and [naming conventions](https://puppet.com/docs/puppet/7/modules_fundamentals.html). Also, naming conventions inside [official rspec-puppet docs](https://rspec-puppet.com/documentation/) are mandatory for the tests to find their target code.
+
+### Atom
+
+For those using [Atom](https://atom.io/) editor, I intentionally made (via `.atomignore`) the Puppet code hidden when one opens the root project directory in Atom. The idea is to keep infrastructure code apart from automation code. So, to manage module and specs, just open `<Project root dir>/rspec_test`. Or, if you prefer everything together, just remove line `rspec_test/` from `.atomignore`.
