@@ -8,6 +8,7 @@
     1. [Project download](#project-download)
     1. [VMs management](#vms-management)
     1. [VMs configuration](#vms-configuration)
+1. [Playing inside the VMs](#playing-inside-the-VMs)
 1. [Module and test specs](#module-and-test-specs)
     1. [Location and naming](#location-and-naming)
     1. [Atom](#atom)
@@ -78,6 +79,14 @@ vagrant ssh -c <Command> \{ <VM> | /<Pattern>/ \} # Executes single command
 - Rspec and its dependencies
 
 Checkout `Vagrantfile` and `bin/post.sh` to see how it's done
+
+## Playing inside the VMs
+
+You can get in every VM up and running with `vagrant ssh <VM>`. There, you can find this whole project under `/vagrant` (an automatic mount point which Vagrant provides by default to ease stuff). Also, you can play with OS, packages, Gems, code, tests, etc., just like you'd do with any Linux host.
+
+Keep in mind the `/vagrant` mount point is shared - any change in a VM will show in all the others, and in the host repository.
+
+Once satisfied with playing, just enter `exit`, and you're back to your workstation. If needed, you can restart (`vagrant reload`), reprovision (`vagrant provision`) or even rebuild (`vagrant destroy && vagrant up`) the VMs. This is the exact greatness of Vagrant.
 
 ## Module and test specs
 
