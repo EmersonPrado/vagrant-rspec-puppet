@@ -11,6 +11,7 @@
 1. [Playing inside the VMs](#playing-inside-the-VMs)
 1. [Module and test specs](#module-and-test-specs)
     1. [Location and naming](#location-and-naming)
+    1. [Code](#code)
     1. [Atom](#atom)
 1. [References](#References)
 
@@ -97,6 +98,14 @@ Once satisfied with playing, just enter `exit`, and you're back to your workstat
 All Puppet code and tests should go inside `<Project root dir>/rspec_test`.
 
 Be sure to follow official conventions for Puppet's directories, files and naming. Also, naming conventions inside official rspec-puppet docs are mandatory for the tests to find their target code.
+
+### Code
+
+Write your Puppet code normally, following official language docs.
+
+For unit tests, find (limited) tutorial and docs in rspec-puppet's official page and a nice walktrough inside Puppet Blog.
+
+This project includes a very simple class `rspec_test`, a very simple defined type `rspec_test::type` in, respectvely, `manifests/init.pp` and `manifests/type.pp`, and a set of unit tests for them in `spec/classes/init_spec.rb` and  `spec/defines/rspec_test__type_spec.rb`. They serve as examples and a starting point - understanding them makes it easy to go further.
 
 ### Atom
 
