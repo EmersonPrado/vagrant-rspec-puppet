@@ -8,6 +8,8 @@
     1. [Project download](#project-download)
     1. [VMs management](#vms-management)
     1. [VMs configuration](#vms-configuration)
+1. [Module and test specs](#module-and-test-specs)
+    1. [Location and naming](#location-and-naming)
 
 ## Description
 
@@ -74,3 +76,11 @@ vagrant ssh -c <Command> \{ <VM> | /<Pattern>/ \} # Executes single command
 - Rspec and its dependencies
 
 Checkout `Vagrantfile` and `bin/post.sh` to see how it's done
+
+## Module and test specs
+
+### Location and naming
+
+All Puppet code and tests should go inside `<Project root dir>/rspec_test`.
+
+Be sure to follow official guidelines for Puppet's [directories and files](https://puppet.com/docs/puppet/7/dirs_important_directories.html) and [naming conventions](https://puppet.com/docs/puppet/7/modules_fundamentals.html). Also, naming conventions inside [official rspec-puppet docs](https://rspec-puppet.com/documentation/) are mandatory for the tests to find their target code.
