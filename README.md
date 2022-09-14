@@ -13,6 +13,7 @@
     1. [Location and naming](#location-and-naming)
     1. [Code](#code)
     1. [Atom](#atom)
+1. [Fire tests](#fire-tests)
 1. [References](#References)
 
 ## Description
@@ -112,6 +113,42 @@ This project includes a very simple class `rspec_test`, a very simple defined ty
 For those using [Atom](https://atom.io/) editor, I intentionally made (via `.atomignore`) the Puppet code hidden when one opens the root project directory in Atom. The idea is to keep infrastructure code apart from automation code. So, to manage module and specs, just open `<Project root dir>/rspec_test`. Or, if you prefer everything together, just remove line `rspec_test/` from `.atomignore`.
 
 ## Fire tests
+
+All these tests use Rake for setup and run. This command does everything magically:
+
+```Shell
+bundle exec rake validate lint spec
+```
+
+> It's quite tempting - and might even work - to run bare `rake` command as:
+>
+> ```Shell
+> rake validate lint spec
+> ```
+>
+> But it will run the OS provided `rake`, instead of the Ruby Bundler provided one. Bundler guarantees compatible Gems for the whole test setup. The OS provided `rake` is outside this setup, and may be compatible just out of luck. **No project of mine will ever support luck**.
+
+But, since we're talking automation here, there's a script in this project which runs tests on all VMs. Just make sure all VMs are up and running and call the script:
+
+```Shell
+vagrant up      # This takes time
+
+vagrant status
+...
+debian                    running (virtualbox)
+redhat                    running (virtualbox)
+opensuse                  running (virtualbox)
+
+bin/test.sh     # Shows output below for each VM
+<VM>
+---> syntax:manifests
+---> syntax:templates
+---> syntax:hiera:yaml
+...
+14 examples, 0 failures
+```
+
+> The number of examples is the amount of validations for all tests. Will vary as the project grows and as you play with specs.
 
 ## References
 
